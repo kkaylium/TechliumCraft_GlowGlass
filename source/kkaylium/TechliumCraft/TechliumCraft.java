@@ -26,6 +26,7 @@ public class TechliumCraft {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		BlocksInit.blocksInit();
+		BlocksInit.registerTileEntities();
 	}
 	
 	@EventHandler
