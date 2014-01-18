@@ -8,7 +8,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
@@ -21,11 +20,10 @@ public class BlockGlowBlock extends BlockContainer {
 
 	@SideOnly(Side.CLIENT)
 	private Icon idleIcon;
-	boolean icon = true;
 	
 	public BlockGlowBlock(int par1) {
 		super(par1, Material.rock);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(TechliumCraft.GGTab);
 		this.setHardness(2F);
 		this.setStepSound(Block.soundStoneFootstep);
 		this.setLightOpacity(1);

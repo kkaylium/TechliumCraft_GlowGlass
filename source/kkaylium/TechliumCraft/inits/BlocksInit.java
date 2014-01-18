@@ -1,11 +1,11 @@
 package kkaylium.TechliumCraft.inits;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import kkaylium.TechliumCraft.blocks.BlockGlowBlock;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.Block;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class BlocksInit {
 	
@@ -15,12 +15,11 @@ public class BlocksInit {
 	{
 		GBWhite = new BlockGlowBlock(BlockIds.GB_WHITE_defaultId).setUnlocalizedName("GBWhite");
 			GameRegistry.registerBlock(GBWhite, "GBWhite");
-			LanguageRegistry.addName(GBWhite, "Glow Block: White");
 	}
 	
 	public static void addNames()
 	{
-		
+		LanguageRegistry.addName(GBWhite, "Glow Block: White");
 	}
 	
 	public static void registerTileEntities()

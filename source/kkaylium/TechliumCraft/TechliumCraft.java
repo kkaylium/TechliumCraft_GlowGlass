@@ -1,8 +1,12 @@
 package kkaylium.TechliumCraft;
 
+import net.minecraft.creativetab.CreativeTabs;
 import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.proxy.CommonProxy;
+import kkaylium.TechliumCraft.recipes.TCBasicRecipes;
+import kkaylium.TechliumCraft.creativetabs.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -22,11 +26,19 @@ public class TechliumCraft {
 	@SidedProxy(clientSide = "kkaylium.TechliumCraft.proxy.ClientProxy", serverSide = "kkaylium.TechliumCraft.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	
+	public static CreativeTabs GGTab = new GGTab(CreativeTabs.getNextID(), "Glow Glass");
+	public static CreativeTabs TCTab = new TCTab(CreativeTabs.getNextID(), "Techlium Craft");
+	
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		BlocksInit.blocksInit();
 		BlocksInit.registerTileEntities();
+		BlocksInit.addNames();
+		ItemsInit.initItems();
+		ItemsInit.itemNames();
+		TCBasicRecipes.initBasicRecipes();
 	}
 	
 	@EventHandler
