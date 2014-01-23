@@ -21,9 +21,9 @@ public class OverworldTreeGenerator implements IWorldGenerator{
 	}
 
 	private void generateSurface(World world, Random random, int BlockX, int BlockZ) {
-		for (int i = 0; i < 10; i++){
+		for (int i = 0; i < 5; i++){
 			int Xcoord1 = BlockX + random.nextInt(16);
-			int Ycoord1 = random.nextInt(70);
+			int Ycoord1 = random.nextInt(64);
 			int Zcoord1 = BlockZ + random.nextInt(16);
 
 			(new OverworldGenGlowTree(true, 5, 0, 0, false)).generate(world, random, Xcoord1, Ycoord1, Zcoord1);

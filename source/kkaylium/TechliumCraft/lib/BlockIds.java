@@ -8,8 +8,8 @@ public class BlockIds {
 	public static int GLOW_LEAVES_defaultId = 503;
 	public static int GLOW_ORE_defaultId = 504;
 	public static int GLOW_GLASS_defaultId = 505;
-	public static int GLOW_DIRT_defaultId = 506;
-	public static int GLOW_STONE_defaultId = 507;
+	public static int GLOW_DIRT_defaultId = 252;
+	public static int GLOW_STONE_defaultId = 253;
 	public static int GLOW_SAPLING_defaultId = 508;
-
+	public static int GLOW_PORTAL_defaultId = 251;
 }

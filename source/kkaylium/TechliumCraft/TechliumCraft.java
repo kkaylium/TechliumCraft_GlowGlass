@@ -5,11 +5,17 @@ import kkaylium.TechliumCraft.creativetabs.TCTab;
 import kkaylium.TechliumCraft.events.EventClass;
 import kkaylium.TechliumCraft.gen.OverworldBiomeOreGen;
 import kkaylium.TechliumCraft.gen.OverworldTreeGenerator;
+import kkaylium.TechliumCraft.gen.glowLand.WorldProviderGlowLand;
+import kkaylium.TechliumCraft.gen.glowLand.gen.GlowLandOreGen;
+import kkaylium.TechliumCraft.inits.BiomesInit;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.lib.Reference;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.proxy.CommonProxy;
+import kkaylium.TechliumCraft.recipes.TCBasicRecipes;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -47,13 +53,21 @@ public class TechliumCraft {
 		ItemsInit.initItems();
 		ItemsInit.itemNames();
 		
+		TCBasicRecipes.initBasicRecipes();
+		
 		GameRegistry.registerWorldGenerator(new OverworldBiomeOreGen());
 		MinecraftForge.EVENT_BUS.register(new EventClass());
 	}
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
+		BiomesInit.biomesInit();
+		
 		GameRegistry.registerWorldGenerator(new OverworldTreeGenerator());
+		GameRegistry.registerWorldGenerator(new GlowLandOreGen());
+		
+		DimensionManager.registerProviderType(Reference.GLOW_LAND_dimensionId, WorldProviderGlowLand.class, true);
+		DimensionManager.registerDimension(Reference.GLOW_LAND_dimensionId, Reference.GLOW_LAND_dimensionId);
 	}
 	
 	@EventHandler

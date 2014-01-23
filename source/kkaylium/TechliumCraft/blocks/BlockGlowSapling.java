@@ -29,8 +29,7 @@ public class BlockGlowSapling extends BlockFlower{
 
 	@Override
 	public void registerIcons(IconRegister iconRegister) {
-		blockIcon = iconRegister.registerIcon("tcgg:"
-				+ this.getUnlocalizedName().substring(5));
+		blockIcon = iconRegister.registerIcon("tcgg:glowSapling");
 	}
 
 	/**

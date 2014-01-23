@@ -1,6 +1,7 @@
 package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.blocks.BlockGlowDirt;
+import kkaylium.TechliumCraft.blocks.BlockGlowLandPortal;
 import kkaylium.TechliumCraft.blocks.BlockGlowLeaves;
 import kkaylium.TechliumCraft.blocks.BlockGlowLog;
 import kkaylium.TechliumCraft.blocks.BlockGlowOre;
@@ -24,6 +25,7 @@ public class BlocksInit {
 	public static Block glowLeaves;
 	public static Block glowSapling;
 	public static Block glowPlanks;
+	public static Block glowLandPortal;
 	
 	public static void blocksInit()
 	{
@@ -41,6 +43,8 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowSapling, "glowSapling");
 		glowPlanks = new BlockGlowPlanks(BlockIds.GLOW_PLANKS_defaultId).setUnlocalizedName("glowPlanks").setTextureName("tcgg:glowPlanks");
 			GameRegistry.registerBlock(glowPlanks, "glowPlanks");
+		glowLandPortal = new BlockGlowLandPortal(BlockIds.GLOW_PORTAL_defaultId).setUnlocalizedName("glowLandPortal");
+			GameRegistry.registerBlock(glowLandPortal, "glowLandPortal");
 	}
 	
 	public static void addNames()
@@ -64,6 +68,7 @@ public class BlocksInit {
 		LanguageRegistry.addName(glowLeaves, "Glow Leaves");
 		LanguageRegistry.addName(glowSapling, "Glow Sapling");
 		LanguageRegistry.addName(glowPlanks, "Glow Planks");
+		LanguageRegistry.addName(glowLandPortal, "Glow Land Portal");
 	}
 	
 	public static void registerTileEntities()

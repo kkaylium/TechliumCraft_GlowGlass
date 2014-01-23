@@ -1,6 +1,7 @@
 package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.items.ItemGlowCrystals;
+import kkaylium.TechliumCraft.items.ItemGlowSticks;
 import kkaylium.TechliumCraft.lib.ItemIds;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,10 +12,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class ItemsInit {
 
 	public static Item glowCrystals;
+	public static Item glowSticks;
 	
 	public static void initItems() {
 		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_defaultId).setUnlocalizedName("GC");
 			GameRegistry.registerItem(glowCrystals, "glowCrystals");
+		glowSticks = new ItemGlowSticks(ItemIds.glowStickDefaultId).setUnlocalizedName("GS").setTextureName("tcgg:glowSticks");
+			GameRegistry.registerItem(glowSticks, "glowSticks");
 	}
 	public static void itemNames(){
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), "Glow Crystal: White");
@@ -30,5 +34,7 @@ public class ItemsInit {
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 10), "Glow Crystal: Purple");
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 11), "Glow Crystal: Pink");
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 12), "Glow Crystal: Special");
+		
+		LanguageRegistry.addName(glowSticks, "Glow Sticks");
 	}
 }
