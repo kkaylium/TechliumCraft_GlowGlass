@@ -1,5 +1,6 @@
 package kkaylium.TechliumCraft.inits;
 
+import kkaylium.TechliumCraft.blocks.BlockGlowBlock;
 import kkaylium.TechliumCraft.blocks.BlockGlowDirt;
 import kkaylium.TechliumCraft.blocks.BlockGlowLandPortal;
 import kkaylium.TechliumCraft.blocks.BlockGlowLeaves;
@@ -10,6 +11,7 @@ import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
 import kkaylium.TechliumCraft.lib.BlockIds;
+import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -26,6 +28,8 @@ public class BlocksInit {
 	public static Block glowSapling;
 	public static Block glowPlanks;
 	public static Block glowLandPortal;
+	
+	public static Block glowBlock;
 	
 	public static void blocksInit()
 	{
@@ -45,6 +49,8 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowPlanks, "glowPlanks");
 		glowLandPortal = new BlockGlowLandPortal(BlockIds.GLOW_PORTAL_defaultId).setUnlocalizedName("glowLandPortal");
 			GameRegistry.registerBlock(glowLandPortal, "glowLandPortal");
+		glowBlock = new BlockGlowBlock(BlockIds.GLOW_BLOCK_defaultId).setUnlocalizedName("glowBlock");
+			GameRegistry.registerBlock(glowBlock, "glowBlock");
 	}
 	
 	public static void addNames()
@@ -73,7 +79,7 @@ public class BlocksInit {
 	
 	public static void registerTileEntities()
 	{
-		//GameRegistry.registerTileEntity(TileEntityGlowBlock.class, "TileEntityGlowBlock");
+		GameRegistry.registerTileEntity(TileEntityGlowBlock.class, "TileEntityGlowBlock");
 	}
 
 }

@@ -15,7 +15,7 @@ public class TCBasicRecipes {
 	
 	public static void initBasicRecipes() {
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(BlocksInit.glowPlanks, 4), "#", '#', glowLog);
+		//GameRegistry.addShapelessRecipe(new ItemStack(BlocksInit.glowPlanks, 4), "#", '#', glowLog);
 		GameRegistry.addRecipe(new ItemStack(ItemsInit.glowSticks, 4), "#", "#",'#', glowPlanks);
 		
 	}

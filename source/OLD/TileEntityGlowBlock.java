@@ -17,12 +17,12 @@ public class TileEntityGlowBlock extends TileEntity{
 	public void updateEntity()
 	{
 		if (!worldObj.isRemote) {
-			if (timer == 0 && !worldObj.isRemote) {
+			if (timer == 0) {
 				leak(xCoord + 1, yCoord, zCoord);
 				leak(xCoord - 1, yCoord, zCoord);
 				leak(xCoord, yCoord, zCoord + 1);
 				leak(xCoord, yCoord, zCoord - 1);
-				worldObj.addBlockEvent(xCoord, yCoord, zCoord, BlockIds.GB_WHITE_defaultId, 1, 0);
+				worldObj.addBlockEvent(xCoord, yCoord, zCoord, BlockIds.GLOW_BLOCK_defaultId, 1, 0);
 			}
 
 			timer--;
@@ -33,7 +33,7 @@ public class TileEntityGlowBlock extends TileEntity{
 	{
 		if(worldObj.isAirBlock(x, y, z))
 		{
-			worldObj.setBlock(x, y, z, BlockIds.GB_WHITE_defaultId);
+			worldObj.setBlock(x, y, z, BlockIds.GLOW_BLOCK_defaultId);
 		}
 	}
 	
