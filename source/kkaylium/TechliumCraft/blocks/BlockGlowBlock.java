@@ -31,24 +31,30 @@ public class BlockGlowBlock extends BlockContainer{
 	public BlockGlowBlock(int par1) {
 		super(par1, Material.rock);
 		this.setCreativeTab(TechliumCraft.GGTab);
-		this.setLightValue(1.0F);
+		this.setLightValue(0.5F);
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
 	}
 
-	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player) {
-//		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
-//			te.getCrystalUsed(0);
-//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-//		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
-//			te.getCrystalUsed(1);
-//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-//			player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
-//		}
-		if (player.inventory.getCurrentItem().equals(new ItemStack(ItemsInit.glowCrystals, 0))){
+	@Override
+	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9) {
+		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
 			te.getCrystalUsed(0);
 			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+			return true;
+		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
+			te.getCrystalUsed(1);
+			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+			return true;
+			//player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
 		}
+		else{
+			return false;
+		}
+//		if (player.inventory.getCurrentItem().equals(new ItemStack(ItemsInit.glowCrystals, 0))){
+//			te.getCrystalUsed(0);
+//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+//		}
 	}
 	
 	@Override
