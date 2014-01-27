@@ -2,6 +2,7 @@ package kkaylium.TechliumCraft.blocks;
 
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.lib.ItemIds;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -10,7 +11,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -33,23 +33,13 @@ public class BlockGlowBlock extends BlockContainer{
 		this.setResistance(10.0F);
 	}
 	
-	@Override
-	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		
-		final ItemStack itemstack = player.inventory.getCurrentItem();
-		if(itemstack == new ItemStack(ItemsInit.glowCrystals, 0)){
-			currentTexture = textures[1];
-			change = true;
+	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player){
+		if(player.inventory.currentItem == ItemIds.GLOW_CRYSTALS_defaultId){
+			if(player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)){
+				
+			}
 		}
-		return false;
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public Icon getBlockTexture(IBlockAccess world, int x, int y, int z, int side)
-	{
-		//TileEntityGlowBlock block = (TileEntityGlowBlock)world.getBlockTileEntity(x, y, z);
-		return change ? currentTexture : blockIcon;
+		
 	}
 	
 	@Override

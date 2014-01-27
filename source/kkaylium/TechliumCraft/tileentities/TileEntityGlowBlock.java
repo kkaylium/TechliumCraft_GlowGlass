@@ -1,52 +1,39 @@
 package kkaylium.TechliumCraft.tileentities;
 
-import kkaylium.TechliumCraft.lib.BlockIds;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGlowBlock extends TileEntity{
 	
-	public int type = 0;
-	public static String[] icons = new String[]{"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial"};
+	public static int color; //13 is base color
 	
-	public TileEntityGlowBlock(){
-		
+	public TileEntityGlowBlock() {
+		color = 13;
 	}
 	
 	@Override
 	public void updateEntity() {
-		if (!worldObj.isRemote) {
-				worldObj.addBlockEvent(xCoord, yCoord, zCoord, BlockIds.GLOW_BLOCK_defaultId, 1, 0);
+		if (!worldObj.isRemote){
+			switch(color){
+				case 0: color = 0; break;
+				case 1: color = 1; break;
+				case 2: color = 2; break;
+				case 3: color = 3; break;
+				case 4: color = 4; break;
+				case 5: color = 5; break;
+				case 6: color = 6; break;
+				case 7: color = 7; break;
+				case 8: color = 8; break;
+				case 9: color = 9; break;
+				case 10: color = 10; break;
+				case 11: color = 11; break;
+				case 12: color = 12; break;
+				default: color = 13; break;
 			}
-	}
-	
-	public int blockChangeTexture()
-	{
-		//this.blockType.onBlockActivated(par1World, par2, par3, par4, par5EntityPlayer, par6, par7, par8, par9)
-		return 0;
-	}
-	
-	@Override
-	public boolean receiveClientEvent(int id, int value)
-	{
-		if(worldObj.isRemote && id == 1)
-		{
-			worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
 		}
+	}
+	
+	public void changeColor(int x, int y, int z){
 		
-		return true;
-	}
-	
-	@Override
-	public void readFromNBT(NBTTagCompound nbt) {
-		super.readFromNBT(nbt);
-		type = nbt.getInteger("Type");
-	}
-	
-	@Override
-	public void writeToNBT(NBTTagCompound nbt) {
-		super.writeToNBT(nbt);
-		nbt.setInteger("Type", type);
 	}
 
 }
