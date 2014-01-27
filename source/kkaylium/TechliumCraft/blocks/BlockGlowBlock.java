@@ -1,6 +1,9 @@
 package kkaylium.TechliumCraft.blocks;
 
+import java.util.LinkedList;
+
 import kkaylium.TechliumCraft.TechliumCraft;
+import kkaylium.TechliumCraft.gen.OverworldBiomeOreGen.OreInfo;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.ItemIds;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
@@ -11,6 +14,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -23,7 +27,6 @@ public class BlockGlowBlock extends BlockContainer{
 	private Icon currentTexture;
 	public static String[] iconNames = new String[]{"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial"};
 	public static TileEntityGlowBlock te = new TileEntityGlowBlock();
-	public static boolean change = false;
 	
 	public BlockGlowBlock(int par1) {
 		super(par1, Material.rock);
@@ -32,14 +35,50 @@ public class BlockGlowBlock extends BlockContainer{
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
 	}
-	
-	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player){
-		if(player.inventory.currentItem == ItemIds.GLOW_CRYSTALS_defaultId){
-			if(player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)){
-				
-			}
+
+	public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player) {
+//		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
+//			te.getCrystalUsed(0);
+//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+//		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
+//			te.getCrystalUsed(1);
+//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+//			player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
+//		}
+		if (player.inventory.getCurrentItem().equals(new ItemStack(ItemsInit.glowCrystals, 0))){
+			te.getCrystalUsed(0);
+			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
 		}
-		
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
+    {
+		if (te.bool[0]){
+			return textures[0];
+		}
+		else if (te.bool[1]){
+			return textures[1];
+		}
+		else if (te.bool[2]){
+			return textures[2];
+		}
+		else if (te.bool[3]){
+			return textures[3];
+		}
+		else if (te.bool[4]){
+			return textures[4];
+		}
+		else if (te.bool[5]){
+			return textures[5];
+		}
+		else if (te.bool[6]){
+			return textures[6];
+		}
+		else{
+        return this.blockIcon;
+		}
 	}
 	
 	@Override
@@ -48,6 +87,7 @@ public class BlockGlowBlock extends BlockContainer{
 		for(int i = 0; i < textures.length; i++){
 			textures[i] = iconregister.registerIcon("tcgg:" + iconNames[i]);
 		}
+		blockIcon = iconregister.registerIcon("tcgg:GBBase");
 	}
 
 	@Override
