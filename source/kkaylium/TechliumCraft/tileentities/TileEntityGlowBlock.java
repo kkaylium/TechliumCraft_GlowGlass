@@ -10,7 +10,7 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityGlowBlock extends TileEntity{
 	
 	public static int color; //13 is base color
-	public boolean[] bool = new boolean[13];
+	public static boolean[] bool = new boolean[13];
 	
 	public TileEntityGlowBlock() {
 		color = 13;
@@ -50,7 +50,7 @@ public class TileEntityGlowBlock extends TileEntity{
 		return true;
 	}
 	
-	public int getCrystalUsed(int cc){
+	public static int getCrystalUsed(int cc){
 		switch(cc){
 			case 0: color = 0; break;
 			case 1: color = 1; break;
