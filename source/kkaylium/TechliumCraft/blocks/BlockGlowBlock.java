@@ -19,7 +19,7 @@ public class BlockGlowBlock extends BlockContainer{
 	@SideOnly(Side.CLIENT)
 	private Icon[] textures = new Icon[12];
 	private boolean changedTexture = false;
-	public static String[] iconNames = new String[]{"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial"};
+	public String[] iconNames = new String[]{"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial"};
 	private TileEntity t; 
 	private boolean texturebool[] = new boolean[12];
 	
@@ -44,6 +44,7 @@ public class BlockGlowBlock extends BlockContainer{
 	                		((TileEntityGlowBlock)t).getCrystalUsed(0);
 	                		player.inventory.getCurrentItem().stackSize--;
 	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -52,83 +53,165 @@ public class BlockGlowBlock extends BlockContainer{
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 1)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(1);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(1);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 2)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	               // 	TileEntityGlowBlock.getCrystalUsed(2);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(2);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 3)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(3);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(3);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 4)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(4);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(4);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 5)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	               // 	TileEntityGlowBlock.getCrystalUsed(5);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(5);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 6)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	               // 	TileEntityGlowBlock.getCrystalUsed(6);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(6);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 7)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(7);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(7);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 8)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	               // 	TileEntityGlowBlock.getCrystalUsed(8);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(8);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 9)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	               // 	TileEntityGlowBlock.getCrystalUsed(9);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(9);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 10)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(10);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(10);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 11)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(11);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(11);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                if (player.inventory.getCurrentItem().getItemDamage() == 12)
 	                {
-	                	player.inventory.getCurrentItem().stackSize--;
-	                //	TileEntityGlowBlock.getCrystalUsed(12);
+	                	if(t instanceof TileEntityGlowBlock){
+	                		((TileEntityGlowBlock)t).getCrystalUsed(12);
+	                		player.inventory.getCurrentItem().stackSize--;
+	                		texturebool = ((TileEntityGlowBlock)t).bool;
+	                		changedTexture = true;
+	                	}
+	                	else{
+	                		return false;
+	                	}
 	                	return true;
 	                }
 	                else{
-	                	//TileEntityGlowBlock.getCrystalUsed(13);
 	                	return false;
 	                }
 	            }
 	            else{
-	            	//TileEntityGlowBlock.getCrystalUsed(13);
 	            	return false;
 	            }
 	            
@@ -136,23 +219,6 @@ public class BlockGlowBlock extends BlockContainer{
 		 else{
 			 return false;
 		 }
-//		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
-//			te.getCrystalUsed(0);
-//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-//			return true;
-//		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
-//			te.getCrystalUsed(1);
-//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-//			return true;
-//			//player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
-//		}
-//		else{
-//			return false;
-//		}
-//		if (player.inventory.getCurrentItem().equals(new ItemStack(ItemsInit.glowCrystals, 0))){
-//			te.getCrystalUsed(0);
-//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-//		}
 	}
 	
 	@Override
@@ -180,6 +246,24 @@ public class BlockGlowBlock extends BlockContainer{
 		else if (texturebool[6]){
 			return textures[6];
 		}
+		else if (texturebool[7]){
+			return textures[7];
+		}
+		else if (texturebool[8]){
+			return textures[8];
+		}
+		else if (texturebool[9]){
+			return textures[9];
+		}
+		else if (texturebool[10]){
+			return textures[10];
+		}
+		else if (texturebool[11]){
+			return textures[11];
+		}
+//		else if (texturebool[12]){
+//			return textures[12];
+//		}
 		else{
         return this.blockIcon;
 		}

@@ -9,15 +9,11 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGlowBlock extends TileEntity{
 	
-	public static int color; //13 is base color
-	public boolean[] bool = new boolean[13];
-	public static int x, y, z;
+	public int color; //13 is base color
+	public boolean[] bool = new boolean[12];
 	
 	public TileEntityGlowBlock() {
 		color = 13;
-		x = xCoord;
-		y = yCoord;
-		z = zCoord;
 	}
 	
 	@Override
@@ -91,7 +87,7 @@ public class TileEntityGlowBlock extends TileEntity{
 				case 10: Arrays.fill(bool, false); bool[10] = true; break;
 				case 11: Arrays.fill(bool, false); bool[11] = true; break;
 				case 12: Arrays.fill(bool, false); bool[12] = true; break;
-				default: Arrays.fill(bool, false); bool[13] = true; break;
+				default: Arrays.fill(bool, false); break;
 			}
 		}
 	}
