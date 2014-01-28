@@ -38,19 +38,30 @@ public class BlockGlowBlock extends BlockContainer{
 
 	@Override
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
-			te.getCrystalUsed(0);
-			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-			return true;
-		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
-			te.getCrystalUsed(1);
-			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
-			return true;
-			//player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
-		}
-		else{
-			return false;
-		}
+		 if (player.inventory.getCurrentItem() != null)
+	        {
+	            if (player.inventory.getCurrentItem().itemID == ItemsInit.glowCrystals.itemID)
+	            {
+	                if (player.inventory.getCurrentItem().getItemDamage() == 0)
+	                {
+	                	player.inventory.getCurrentItem().stackSize--;
+	                	return true;
+	                }
+	            }
+	        }
+//		if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 0)) {
+//			te.getCrystalUsed(0);
+//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+//			return true;
+//		} else if (player.inventory.getCurrentItem() == new ItemStack(ItemsInit.glowCrystals, 1)) {
+//			te.getCrystalUsed(1);
+//			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
+//			return true;
+//			//player.inventory.getItemStack().equals(new ItemStack(ItemsInit.glowCrystals, 1));
+//		}
+//		else{
+//			return false;
+//		}
 //		if (player.inventory.getCurrentItem().equals(new ItemStack(ItemsInit.glowCrystals, 0))){
 //			te.getCrystalUsed(0);
 //			player.inventory.consumeInventoryItem(ItemIds.GLOW_CRYSTALS_defaultId);
