@@ -18,10 +18,7 @@ public class BlockGlowBlock extends BlockContainer{
 
 	@SideOnly(Side.CLIENT)
 	private Icon[] textures = new Icon[12];
-	private boolean changedTexture = false;
 	public String[] iconNames = new String[]{"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial"};
-	private TileEntity t; 
-	private boolean texturebool[] = new boolean[12];
 	
 	public BlockGlowBlock(int par1) {
 		super(par1, Material.rock);
@@ -33,7 +30,7 @@ public class BlockGlowBlock extends BlockContainer{
 
 	@Override
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9) {
-		 t = par1World.getBlockTileEntity(par2, par3, par4);
+		 TileEntity t = par1World.getBlockTileEntity(par2, par3, par4);
 		 if (player.inventory.getCurrentItem() != null)
 	        {
 	            if (player.inventory.getCurrentItem().itemID == ItemsInit.glowCrystals.itemID)
@@ -43,8 +40,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(0);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -56,8 +51,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(1);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -69,8 +62,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(2);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -82,8 +73,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(3);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -95,8 +84,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(4);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -108,8 +95,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(5);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -121,8 +106,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(6);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -134,8 +117,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(7);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -147,8 +128,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(8);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -160,8 +139,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(9);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -173,8 +150,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(10);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -186,8 +161,6 @@ public class BlockGlowBlock extends BlockContainer{
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(11);
 	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
 	                	}
 	                	else{
 	                		return false;
@@ -198,9 +171,7 @@ public class BlockGlowBlock extends BlockContainer{
 	                {
 	                	if(t instanceof TileEntityGlowBlock){
 	                		((TileEntityGlowBlock)t).getCrystalUsed(12);
-	                		player.inventory.getCurrentItem().stackSize--;
-	                		texturebool = ((TileEntityGlowBlock)t).bool;
-	                		changedTexture = true;
+	                		player.inventory.getCurrentItem().stackSize--;         
 	                	}
 	                	else{
 	                		return false;
@@ -225,47 +196,53 @@ public class BlockGlowBlock extends BlockContainer{
 	@SideOnly(Side.CLIENT)
 	public Icon getBlockTexture(IBlockAccess par1IBlockAccess, int par2, int par3, int par4, int par5)
     {
-		if (texturebool[0]){
+		TileEntity t = par1IBlockAccess.getBlockTileEntity(par2, par3, par4);
+		if(t instanceof TileEntityGlowBlock){
+		if (((TileEntityGlowBlock)t).bool[0]){
 			return textures[0];
 		}
-		else if (texturebool[1]){
+		else if (((TileEntityGlowBlock)t).bool[1]){
 			return textures[1];
 		}
-		else if (texturebool[2]){
+		else if (((TileEntityGlowBlock)t).bool[2]){
 			return textures[2];
 		}
-		else if (texturebool[3]){
+		else if (((TileEntityGlowBlock)t).bool[3]){
 			return textures[3];
 		}
-		else if (texturebool[4]){
+		else if (((TileEntityGlowBlock)t).bool[4]){
 			return textures[4];
 		}
-		else if (texturebool[5]){
+		else if (((TileEntityGlowBlock)t).bool[5]){
 			return textures[5];
 		}
-		else if (texturebool[6]){
+		else if (((TileEntityGlowBlock)t).bool[6]){
 			return textures[6];
 		}
-		else if (texturebool[7]){
+		else if (((TileEntityGlowBlock)t).bool[7]){
 			return textures[7];
 		}
-		else if (texturebool[8]){
+		else if (((TileEntityGlowBlock)t).bool[8]){
 			return textures[8];
 		}
-		else if (texturebool[9]){
+		else if (((TileEntityGlowBlock)t).bool[9]){
 			return textures[9];
 		}
-		else if (texturebool[10]){
+		else if (((TileEntityGlowBlock)t).bool[10]){
 			return textures[10];
 		}
-		else if (texturebool[11]){
+		else if (((TileEntityGlowBlock)t).bool[11]){
 			return textures[11];
 		}
-//		else if (texturebool[12]){
-//			return textures[12];
-//		}
+		else if (((TileEntityGlowBlock)t).bool[12]){
+			return textures[12];
+		}
 		else{
         return this.blockIcon;
+		}
+		}
+		else{
+			return this.blockIcon;
 		}
 	}
 	

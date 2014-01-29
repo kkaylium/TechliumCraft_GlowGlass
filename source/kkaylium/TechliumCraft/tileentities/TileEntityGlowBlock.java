@@ -10,7 +10,9 @@ import net.minecraft.tileentity.TileEntity;
 public class TileEntityGlowBlock extends TileEntity{
 	
 	public int color; //13 is base color
-	public boolean[] bool = new boolean[12];
+	public boolean[] bool = new boolean[13];
+	
+	public boolean isDirty = false;
 	
 	public TileEntityGlowBlock() {
 		color = 13;
@@ -18,24 +20,9 @@ public class TileEntityGlowBlock extends TileEntity{
 	
 	@Override
 	public void updateEntity() {
-		if (!worldObj.isRemote){
+		if (!worldObj.isRemote && isDirty){
 			worldObj.addBlockEvent(xCoord, yCoord, zCoord, BlockIds.GLOW_BLOCK_defaultId, 1, 0);
-//			switch(color){
-//				case 0: Arrays.fill(bool, false); bool[0] = true; break;
-//				case 1: color = 1; break;
-//				case 2: color = 2; break;
-//				case 3: color = 3; break;
-//				case 4: color = 4; break;
-//				case 5: color = 5; break;
-//				case 6: color = 6; break;
-//				case 7: color = 7; break;
-//				case 8: color = 8; break;
-//				case 9: color = 9; break;
-//				case 10: color = 10; break;
-//				case 11: color = 11; break;
-//				case 12: color = 12; break;
-//				default: color = 13; break;
-//			}
+			isDirty = false;
 		}
 	}
 	
@@ -68,6 +55,7 @@ public class TileEntityGlowBlock extends TileEntity{
 			default: color = 13; break;
 		}
 		changeColor(xCoord, yCoord, zCoord);
+		isDirty = true;
 		return color;
 	}
 	
@@ -89,6 +77,7 @@ public class TileEntityGlowBlock extends TileEntity{
 				case 12: Arrays.fill(bool, false); bool[12] = true; break;
 				default: Arrays.fill(bool, false); break;
 			}
+			isDirty = true;
 		}
 	}
 	
