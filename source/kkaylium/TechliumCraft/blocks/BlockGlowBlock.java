@@ -31,7 +31,7 @@ public class BlockGlowBlock extends BlockContainer{
 	@Override
 	public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer player, int par6, float par7, float par8, float par9) {
 		 TileEntity t = par1World.getBlockTileEntity(par2, par3, par4);
-		 if (player.inventory.getCurrentItem() != null)
+		 if (!par1World.isRemote && player.inventory.getCurrentItem() != null)
 	        {
 	            if (player.inventory.getCurrentItem().itemID == ItemsInit.glowCrystals.itemID)
 	            {
