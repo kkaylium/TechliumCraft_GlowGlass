@@ -2,8 +2,6 @@ package kkaylium.TechliumCraft.tileentities;
 
 import java.util.Arrays;
 
-import kkaylium.TechliumCraft.lib.BlockIds;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
@@ -21,20 +19,9 @@ public class TileEntityGlowBlock extends TileEntity{
 	@Override
 	public void updateEntity() {
 		if (!worldObj.isRemote && isDirty){
-			worldObj.addBlockEvent(xCoord, yCoord, zCoord, BlockIds.GLOW_BLOCK_defaultId, 1, 0);
+			worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
 			isDirty = false;
 		}
-	}
-	
-	@Override
-	public boolean receiveClientEvent(int id, int value)
-	{
-		if(worldObj.isRemote && id == 1)
-		{
-			worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
-		}
-		
-		return true;
 	}
 	
 	public int getCrystalUsed(int cc){
