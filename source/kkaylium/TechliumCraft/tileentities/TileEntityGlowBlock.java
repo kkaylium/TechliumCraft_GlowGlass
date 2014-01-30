@@ -3,6 +3,9 @@ package kkaylium.TechliumCraft.tileentities;
 import java.util.Arrays;
 
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.INetworkManager;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityGlowBlock extends TileEntity{
@@ -67,6 +70,22 @@ public class TileEntityGlowBlock extends TileEntity{
 			isDirty = true;
 		}
 	}
+	
+	@Override
+    public Packet getDescriptionPacket()
+    {
+        NBTTagCompound tag = new NBTTagCompound();
+        writeToNBT(tag);
+        return new Packet132TileEntityData(xCoord, yCoord, zCoord, 1, tag);
+    }
+
+
+    @Override
+    public void onDataPacket(INetworkManager net, Packet132TileEntityData packet)
+    {
+        readFromNBT(packet.data);
+        worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
+    }
 	
 	@Override
 	public void writeToNBT(NBTTagCompound compound)

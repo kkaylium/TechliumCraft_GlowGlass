@@ -9,9 +9,11 @@ import kkaylium.TechliumCraft.blocks.BlockGlowOre;
 import kkaylium.TechliumCraft.blocks.BlockGlowPlanks;
 import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
+import kkaylium.TechliumCraft.blocks.BlockInfuserL1;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
+import kkaylium.TechliumCraft.tileentities.TileEntityInfuserL1;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -30,6 +32,8 @@ public class BlocksInit {
 	public static Block glowLandPortal;
 	
 	public static Block glowBlock;
+	
+	public static Block infuserL1;
 	
 	public static void blocksInit()
 	{
@@ -51,6 +55,9 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowLandPortal, "glowLandPortal");
 		glowBlock = new BlockGlowBlock(BlockIds.GLOW_BLOCK_defaultId).setUnlocalizedName("glowBlock");
 			GameRegistry.registerBlock(glowBlock, "glowBlock");
+			
+		infuserL1 = new BlockInfuserL1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
+			GameRegistry.registerBlock(infuserL1, "infuserL1");
 	}
 	
 	public static void addNames()
@@ -75,11 +82,14 @@ public class BlocksInit {
 		LanguageRegistry.addName(glowSapling, "Glow Sapling");
 		LanguageRegistry.addName(glowPlanks, "Glow Planks");
 		LanguageRegistry.addName(glowLandPortal, "Glow Land Portal");
+		
+		LanguageRegistry.addName(infuserL1, "Serum Infuser: Level One");
 	}
 	
 	public static void registerTileEntities()
 	{
 		GameRegistry.registerTileEntity(TileEntityGlowBlock.class, "TileEntityGlowBlock");
+		GameRegistry.registerTileEntity(TileEntityInfuserL1.class, "TileEntityInfuserL1");
 	}
 
 }
