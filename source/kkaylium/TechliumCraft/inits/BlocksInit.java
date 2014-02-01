@@ -15,6 +15,7 @@ import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
+import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
 import kkaylium.TechliumCraft.tileentities.TileEntityInfuserL1;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -97,6 +98,7 @@ public class BlocksInit {
 	{
 		GameRegistry.registerTileEntity(TileEntityGlowBlock.class, "TileEntityGlowBlock");
 		GameRegistry.registerTileEntity(TileEntityGlowGlass.class, "TileEntityGlowGlass");
+		GameRegistry.registerTileEntity(TileEntityGlowPlanks.class, "TileEntityGlowPlanks");
 		GameRegistry.registerTileEntity(TileEntityInfuserL1.class, "TileEntityInfuserL1");
 	}
 
