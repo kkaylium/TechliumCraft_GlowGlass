@@ -16,7 +16,7 @@ public class EntityRainbowSlime extends EntitySlime{
     public float prevSquishFactor;
 
     //The particle effect
-    String glowSlimeParticle = "iconcrack_" + ItemsInit.glowCrystals.itemID + "_10"; 
+    String glowSlimeParticle = "iconcrack_" + ItemsInit.glowCrystals.itemID + "_11"; 
     
     /** the time between each jump of the slime */
     private int slimeJumpDelay;

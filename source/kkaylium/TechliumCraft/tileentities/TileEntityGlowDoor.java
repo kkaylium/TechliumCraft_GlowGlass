@@ -6,13 +6,13 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet132TileEntityData;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileEntityGlowFence extends TileEntity{
+public class TileEntityGlowDoor extends TileEntity{
 
-	  public int color; // 14 is base color
+	 public int color; // 14 is base color
 
 	    public boolean isDirty = false;
 
-	    public TileEntityGlowFence()
+	    public TileEntityGlowDoor()
 	    {
 	        color = 14;
 	    }
@@ -65,5 +65,6 @@ public class TileEntityGlowFence extends TileEntity{
 	    {
 	        readFromNBT(packet.data);
 	        worldObj.markBlockForRenderUpdate(xCoord, yCoord, zCoord);
-	    }
+	    }	
+	
 }

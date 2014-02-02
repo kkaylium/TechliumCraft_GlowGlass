@@ -10,7 +10,7 @@ public class DropRainbowCrystals {
 	@ForgeSubscribe
 	public void onEntityDrop(LivingDropsEvent event){
 		if(event.entity instanceof EntityRainbowSlime){
-			event.entity.entityDropItem(new ItemStack(ItemsInit.glowCrystals, 12, 1), 0.0F);
+			event.entity.entityDropItem(new ItemStack(ItemsInit.glowCrystals, 1, 12), 0.0F);
 		}
 	}
 

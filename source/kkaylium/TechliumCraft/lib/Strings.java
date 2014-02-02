@@ -42,10 +42,26 @@ public class Strings {
 	public static String GLOW_PORTAL_NAME = "Glow Portal";
 		public static String GLOW_PORTAL_KEY = "glowPortal";
 		
+	public static String GLOW_FENCE_NAME = "Glow Fence";
+		public static String GLOW_FENCE_KEY = "glowFence";
+			public static String TE_GLOW_FENCE_KEY = "TileEntityGlowFence";
+		
+	public static String GLOW_GATE_NAME = "Glow Gate";
+		public static String GLOW_GATE_KEY = "glowGate";
+			public static String TE_GLOW_GATE_KEY = "TileEntityGlowGate";
+			
+	public static String GLOW_DOOR_NAME = "Glow Door";
+		public static String GLOW_DOOR_KEY = "glowDoor";
+			public static String TE_GLOW_DOOR_KEY = "TileEntityGlowDoor";
+			
 	//Items
 	public static String GLOW_STICKS_NAME = "Glow Sticks";
 		public static String GLOW_STICKS_KEY = "glowSticks";
+		
 	public static String GLOW_CRYSTALS_NAME = "Glow Crystal";
 		public static String GLOW_CRYSTALS_KEY = "glowCrystals";
+		
+	public static String GLOW_DOOR_ITEM_NAME = "Glow Door";
+		public static String GLOW_DOOR_ITEM_KEY = "glowDoorItem";
 	
 }

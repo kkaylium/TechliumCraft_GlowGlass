@@ -2,6 +2,7 @@ package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.blocks.BlockGlowBlock;
 import kkaylium.TechliumCraft.blocks.BlockGlowDirt;
+import kkaylium.TechliumCraft.blocks.BlockGlowFence;
 import kkaylium.TechliumCraft.blocks.BlockGlowGlass;
 import kkaylium.TechliumCraft.blocks.BlockGlowLandPortal;
 import kkaylium.TechliumCraft.blocks.BlockGlowLeaves;
@@ -15,6 +16,7 @@ import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
+import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
 import kkaylium.TechliumCraft.tileentities.TileEntityInfuserL1;
@@ -36,6 +38,9 @@ public class BlocksInit {
 	
 	public static Block glowBlock;
 	public static Block glowGlass;
+	public static Block glowFence;
+	public static Block glowGate;
+	public static Block glowDoor;
 	
 	public static Block infuserL1;
 	
@@ -61,6 +66,10 @@ public class BlocksInit {
 			GameRegistry.registerBlock(glowBlock, Strings.GLOW_BLOCK_KEY);
 		glowGlass = new BlockGlowGlass(BlockIds.GLOW_GLASS_ID).setUnlocalizedName(Strings.GLOW_GLASS_KEY);
 			GameRegistry.registerBlock(glowGlass, Strings.GLOW_GLASS_KEY);
+		glowFence = new BlockGlowFence(BlockIds.GLOW_FENCE_ID, Strings.GLOW_FENCE_KEY).setUnlocalizedName(Strings.GLOW_FENCE_KEY);
+			GameRegistry.registerBlock(glowFence, Strings.GLOW_FENCE_KEY);
+		glowDoor = new BlockGlowFence(BlockIds.GLOW_DOOR_ID, Strings.GLOW_DOOR_KEY).setUnlocalizedName(Strings.GLOW_DOOR_ITEM_KEY);
+			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
 			
 		infuserL1 = new BlockInfuserL1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
 			GameRegistry.registerBlock(infuserL1, "infuserL1");
@@ -90,6 +99,8 @@ public class BlocksInit {
 		LanguageRegistry.addName(glowLandPortal, Strings.GLOW_PORTAL_NAME);
 		LanguageRegistry.addName(glowBlock, Strings.GLOW_BLOCK_NAME);
 		LanguageRegistry.addName(glowGlass, Strings.GLOW_GLASS_NAME);
+		LanguageRegistry.addName(glowFence, Strings.GLOW_FENCE_NAME);
+		LanguageRegistry.addName(glowDoor, Strings.GLOW_DOOR_NAME);
 		
 		LanguageRegistry.addName(infuserL1, "Serum Infuser: Level One");
 	}
@@ -99,6 +110,8 @@ public class BlocksInit {
 		GameRegistry.registerTileEntity(TileEntityGlowBlock.class, Strings.TE_GLOW_BLOCK_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowGlass.class, Strings.TE_GLOW_GLASS_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowPlanks.class, Strings.TE_GLOW_PLANKS_KEY);
+		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_FENCE_KEY);
+		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_DOOR_KEY);
 		GameRegistry.registerTileEntity(TileEntityInfuserL1.class, "TileEntityInfuserL1");
 	}
 

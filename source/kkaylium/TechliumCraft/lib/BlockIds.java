@@ -15,6 +15,9 @@ public class BlockIds {
 	public static int GLOW_STONE_defaultId = 253;
 	public static int GLOW_SAPLING_defaultId = 508;
 	public static int GLOW_PORTAL_defaultId = 251;
+	public static int GLOW_FENCE_defaultId = 506;
+	public static int GLOW_GATE_defaultId = 507;
+	public static int GLOW_DOOR_defaultId = 508;
 	
 	public static int GLOW_BLOCK_ID;
 	public static int GLOW_PLANKS_ID;
@@ -22,6 +25,9 @@ public class BlockIds {
 	public static int GLOW_LEAVES_ID;
 	public static int GLOW_ORE_ID;
 	public static int GLOW_GLASS_ID;
+	public static int GLOW_FENCE_ID;
+	public static int GLOW_GATE_ID;
+	public static int GLOW_DOOR_ID;
 	
 	public static int INFUSERL1_ID;
 	

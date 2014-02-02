@@ -1,6 +1,7 @@
 package kkaylium.TechliumCraft.inits;
 
 import kkaylium.TechliumCraft.items.ItemGlowCrystals;
+import kkaylium.TechliumCraft.items.ItemGlowDoor;
 import kkaylium.TechliumCraft.items.ItemGlowSticks;
 import kkaylium.TechliumCraft.lib.ItemIds;
 import kkaylium.TechliumCraft.lib.Strings;
@@ -14,12 +15,14 @@ public class ItemsInit {
 
 	public static Item glowCrystals;
 	public static Item glowSticks;
+	public static Item glowDoorItem;
 	
 	public static void initItems() {
-		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_defaultId).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);
+		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_ID).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);
 			GameRegistry.registerItem(glowCrystals, Strings.GLOW_CRYSTALS_KEY);
-		glowSticks = new ItemGlowSticks(ItemIds.glowStickDefaultId).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName("tcgg:" + Strings.GLOW_STICKS_KEY);
+		glowSticks = new ItemGlowSticks(ItemIds.GLOW_STICK_ID).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName("tcgg:" + Strings.GLOW_STICKS_KEY);
 			GameRegistry.registerItem(glowSticks, Strings.GLOW_STICKS_KEY);
+		glowDoorItem = new ItemGlowDoor(ItemIds.GLOW_DOOR_ITEM_ID).setUnlocalizedName(Strings.GLOW_DOOR_KEY).setTextureName("tcgg" + Strings.GLOW_DOOR_KEY);
 	}
 	public static void itemNames(){
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), Strings.GLOW_CRYSTALS_NAME + " : White");

@@ -31,6 +31,10 @@ public class TechliumCraftConfig {
 
 		BlockIds.GLOW_PORTAL_ID = config.getBlock(Strings.GLOW_PORTAL_NAME, 506).getInt();
 		
+		BlockIds.GLOW_FENCE_ID = config.getBlock(Strings.GLOW_FENCE_NAME, 507).getInt();
+		
+		BlockIds.GLOW_GATE_ID = config.getBlock(Strings.GLOW_GATE_NAME, 508).getInt();
+		
 		config.save();
 	}
 }
