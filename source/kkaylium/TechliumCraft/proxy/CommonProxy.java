@@ -1,5 +1,8 @@
 package kkaylium.TechliumCraft.proxy;
 
+import kkaylium.TechliumCraft.mobs.entities.EntityRainbowSlime;
+import cpw.mods.fml.common.registry.EntityRegistry;
+
 
 public class CommonProxy{
 
@@ -17,4 +20,9 @@ public class CommonProxy{
 //		return null;
 //	}
 
+	public void registerRenderInformation()
+	{
+		EntityRegistry.registerGlobalEntityID(EntityRainbowSlime.class, "RainbowSlime", EntityRegistry.findGlobalUniqueEntityId(), 10, 0);
+	}
+	
 }

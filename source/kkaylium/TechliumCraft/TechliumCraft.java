@@ -12,11 +12,18 @@ import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Reference;
 import kkaylium.TechliumCraft.lib.Strings;
+import kkaylium.TechliumCraft.mobs.entities.EntityRainbowSlime;
+import kkaylium.TechliumCraft.mobs.events.DropRainbowCrystals;
 import kkaylium.TechliumCraft.proxy.CommonProxy;
+import kkaylium.TechliumCraft.proxy.TechliumCraftConfig;
 import kkaylium.TechliumCraft.recipes.TCBasicRecipes;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -25,6 +32,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -44,6 +52,11 @@ public class TechliumCraft {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		
+		TechliumCraftConfig.configInit(event);
+		
+		MinecraftForge.EVENT_BUS.register(new DropRainbowCrystals());
+		
 		LanguageRegistry.instance().addStringLocalization("itemGroup.Glow Glass", "Glow Glass");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.TechliumCraft", "TechliumCraft");
 		
@@ -68,6 +81,13 @@ public class TechliumCraft {
 		
 		DimensionManager.registerProviderType(Reference.GLOW_LAND_dimensionId, WorldProviderGlowLand.class, true);
 		DimensionManager.registerDimension(Reference.GLOW_LAND_dimensionId, Reference.GLOW_LAND_dimensionId);
+		
+		OreDictionary.registerOre(BlocksInit.glowOres.getUnlocalizedName(), new ItemStack(ItemsInit.glowCrystals));
+		
+		proxy.registerRenderInformation();
+		EntityRegistry.registerModEntity(EntityRainbowSlime.class, "RainbowSlime", 2, this, 40, 3, true);
+        EntityRegistry.addSpawn(EntityRainbowSlime.class, 2, 1, 3, EnumCreatureType.monster, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.plains);
+        LanguageRegistry.instance().addStringLocalization("entity.RainbowSlime.name", "Rainbow Slime");
 	}
 	
 	@EventHandler
