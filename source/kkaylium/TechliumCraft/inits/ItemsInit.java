@@ -3,6 +3,7 @@ package kkaylium.TechliumCraft.inits;
 import kkaylium.TechliumCraft.items.ItemGlowCrystals;
 import kkaylium.TechliumCraft.items.ItemGlowSticks;
 import kkaylium.TechliumCraft.lib.ItemIds;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -15,26 +16,26 @@ public class ItemsInit {
 	public static Item glowSticks;
 	
 	public static void initItems() {
-		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_defaultId).setUnlocalizedName("GC");
-			GameRegistry.registerItem(glowCrystals, "glowCrystals");
-		glowSticks = new ItemGlowSticks(ItemIds.glowStickDefaultId).setUnlocalizedName("GS").setTextureName("tcgg:glowSticks");
-			GameRegistry.registerItem(glowSticks, "glowSticks");
+		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_defaultId).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);
+			GameRegistry.registerItem(glowCrystals, Strings.GLOW_CRYSTALS_KEY);
+		glowSticks = new ItemGlowSticks(ItemIds.glowStickDefaultId).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName("tcgg:" + Strings.GLOW_STICKS_KEY);
+			GameRegistry.registerItem(glowSticks, Strings.GLOW_STICKS_KEY);
 	}
 	public static void itemNames(){
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), "Glow Crystal: White");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 1), "Glow Crystal: Black");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 2), "Glow Crystal: Red");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 3), "Glow Crystal: Orange");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 4), "Glow Crystal: Yellow");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 5), "Glow Crystal: Lime");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 6), "Glow Crystal: Green");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 7), "Glow Crystal: Sky");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 8), "Glow Crystal: Blue");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 9), "Glow Crystal: Lilac");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 10), "Glow Crystal: Purple");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 11), "Glow Crystal: Pink");
-		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 12), "Glow Crystal: Special");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), Strings.GLOW_CRYSTALS_NAME + " : White");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 1), Strings.GLOW_CRYSTALS_NAME + " : Black");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 2), Strings.GLOW_CRYSTALS_NAME + " : Red");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 3), Strings.GLOW_CRYSTALS_NAME + " : Orange");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 4), Strings.GLOW_CRYSTALS_NAME + " : Yellow");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 5), Strings.GLOW_CRYSTALS_NAME + " : Lime");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 6), Strings.GLOW_CRYSTALS_NAME + " : Green");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 7), Strings.GLOW_CRYSTALS_NAME + " : Sky");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 8), Strings.GLOW_CRYSTALS_NAME + " : Blue");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 9), Strings.GLOW_CRYSTALS_NAME + " : Lilac");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 10), Strings.GLOW_CRYSTALS_NAME + " : Purple");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 11), Strings.GLOW_CRYSTALS_NAME + " : Pink");
+		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 12), Strings.GLOW_CRYSTALS_NAME + " : Special");
 		
-		LanguageRegistry.addName(glowSticks, "Glow Sticks");
+		LanguageRegistry.addName(glowSticks, Strings.GLOW_STICKS_NAME);
 	}
 }
