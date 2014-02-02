@@ -125,7 +125,7 @@ public class OverworldGenGlowTree extends WorldGenerator{
                                 {
                                         k1 = par1World.getBlockId(par3, par4 + j1, par5);
                                         Block block = Block.blocksList[k1];
-                                        if (k1 == 0 || block == null || block.isLeaves(par1World, par3, par4 + j1, par5))
+                                        if (block == null || block.isAirBlock(par1World, par3, par4 + j1, par5) || block.isLeaves(par1World, par3, par4 + j1, par5))
                                         {
                                                 /** Custom Log block **/
                                                 this.setBlockAndMetadata(par1World, par3, par4 + j1, par5, BlocksInit.glowLog.blockID, this.metaWood);
