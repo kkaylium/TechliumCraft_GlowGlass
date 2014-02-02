@@ -22,7 +22,7 @@ public class BlockGlowBlock extends BlockContainer
 
     @SideOnly(Side.CLIENT)
     private Icon[] textures = new Icon[13];
-    public String[] iconNames = new String[] { "GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial", "GBBase"};
+    public String[] iconNames = new String[] {"GBWhite", "GBBlack", "GBRed", "GBOrange", "GBYellow", "GBLime", "GBGreen", "GBSky", "GBBlue", "GBLilac", "GBPurple", "GBPink", "GBSpecial", "GBBase"};
 
     public BlockGlowBlock(int par1)
     {

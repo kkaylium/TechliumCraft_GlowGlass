@@ -1,7 +1,5 @@
 package kkaylium.TechliumCraft.tileentities;
 
-import java.util.Arrays;
-
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet;

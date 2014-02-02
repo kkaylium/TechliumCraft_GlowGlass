@@ -19,7 +19,7 @@ public class OverworldGenGlowTree extends WorldGenerator{
 	private final int metaLeaves;
 	
 	public OverworldGenGlowTree(boolean par1) {
-		this(par1, 8, 0, 0, false);
+		this(par1, 5, 0, 0, false);
 	}
 
 	public OverworldGenGlowTree(boolean par1, int par2, int par3, int par4, boolean par5) {
