@@ -4,6 +4,7 @@ import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.BlockIds;
+import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -82,9 +83,9 @@ public class BlockGlowGlass extends BlockContainer{
     {
         for (int i = 0; i < textures.length; i++)
         {
-            textures[i] = iconregister.registerIcon("tcgg:" + iconNames[i]);
+            textures[i] = iconregister.registerIcon(Strings.MOD_ID + ":" + iconNames[i]);
         }
-        blockIcon = iconregister.registerIcon("tcgg:GGBase");
+        blockIcon = iconregister.registerIcon(Strings.MOD_ID + ":GGBase");
     }
 	
 	@SideOnly(Side.CLIENT)

@@ -7,7 +7,6 @@ import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.lib.Strings;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
@@ -49,9 +48,9 @@ public class BlockGlowFence extends BlockFence implements ITileEntityProvider{
     {
 		 for (int i = 0; i < textures.length; i++)
 	        {
-	            textures[i] = iconregister.registerIcon("tcgg:" + iconNames[i]);
+	            textures[i] = iconregister.registerIcon(Strings.MOD_ID + ":" + iconNames[i]);
 	        }
-        this.blockIcon = iconregister.registerIcon("tcgg:" + this.field_94464_a);
+        this.blockIcon = iconregister.registerIcon(Strings.MOD_ID + ":" + this.field_94464_a);
     }
 	
 	@Override

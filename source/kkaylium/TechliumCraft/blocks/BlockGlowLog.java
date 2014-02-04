@@ -3,6 +3,7 @@ package kkaylium.TechliumCraft.blocks;
 import java.util.Random;
 
 import kkaylium.TechliumCraft.TechliumCraft;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -14,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockGlowLog extends BlockContainer{
 
-	 public static final String[] woodType = new String[] {"Tutorial"};
+	 public static final String[] woodType = new String[] {"Glow"};
      @SideOnly(Side.CLIENT)
      private Icon iconLogTop;
      @SideOnly(Side.CLIENT)
@@ -79,9 +80,9 @@ public class BlockGlowLog extends BlockContainer{
      public void registerIcons(IconRegister par1IconRegister)
      {
              /** change the "Tutorial:LogSide,LogTop to your texture names **/
-             this.blockIcon = par1IconRegister.registerIcon("tcgg:GlowLog");
-             this.iconLogTop = par1IconRegister.registerIcon("tcgg:GlowLogTop");
-             this.iconLogBottom = par1IconRegister.registerIcon("tcgg:GlowLogTop");
+             this.blockIcon = par1IconRegister.registerIcon(Strings.MOD_ID + ":GlowLog");
+             this.iconLogTop = par1IconRegister.registerIcon(Strings.MOD_ID + ":GlowLogTop");
+             this.iconLogBottom = par1IconRegister.registerIcon(Strings.MOD_ID + ":GlowLogTop");
      }
 
      @Override

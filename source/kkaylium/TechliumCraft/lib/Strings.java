@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 public class Strings {
 
 	public static final String MOD_NAME = "TechliumCraft + GlowGlass";
-	public static final String MOD_ID = "tcgg";
+	public static final String MOD_ID = "techliumcraft";
 	public static final String INFUSERL1 = "/assets/tcgg/textures/models/Infuser/InfuserL1OBJ.obj";
 	public static final ResourceLocation INFUSERL1_TEXTURE = new ResourceLocation("tcgg:textures/models/Infuser/InfuserL1.png");
 	
@@ -53,6 +53,12 @@ public class Strings {
 	public static String GLOW_DOOR_NAME = "Glow Door";
 		public static String GLOW_DOOR_KEY = "glowDoor";
 			public static String TE_GLOW_DOOR_KEY = "TileEntityGlowDoor";
+			
+	public static String SERUM_DIRTY_STILL_NAME = "Polluted Serum: Still";
+		public static String SERUM_DIRTY_STILL_KEY = "serumDirtyStill";
+	
+	public static String SERUM_DIRTY_FLOWING_NAME = "Polluted Serum";
+		public static String SERUM_DIRTY_FLOWING_KEY ="serumDirtyFlowing";
 			
 	//Items
 	public static String GLOW_STICKS_NAME = "Glow Sticks";

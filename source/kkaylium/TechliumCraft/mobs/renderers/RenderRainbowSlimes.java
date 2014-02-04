@@ -1,5 +1,6 @@
 package kkaylium.TechliumCraft.mobs.renderers;
 
+import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.mobs.entities.EntityRainbowSlime;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -15,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderRainbowSlimes extends RenderLiving{
 
-	private static final ResourceLocation slimeTextures = new ResourceLocation("tcgg", "textures/entity/rainbowslime/RainbowSlime.png");
+	private static final ResourceLocation slimeTextures = new ResourceLocation(Strings.MOD_ID, "textures/entity/rainbowslime/RainbowSlime.png");
     private ModelBase scaleAmount;
 
     public RenderRainbowSlimes(ModelBase par1ModelBase, ModelBase par2ModelBase, float par3)

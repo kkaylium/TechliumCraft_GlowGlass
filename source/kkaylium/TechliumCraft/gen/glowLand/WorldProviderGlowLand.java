@@ -23,8 +23,7 @@ public class WorldProviderGlowLand extends WorldProvider{
 	}
 
 	public IChunkProvider createChunkGenerator() {
-		return new ChunkProviderGlowLand(this.worldObj,
-				this.worldObj.getSeed(), false);
+		return new ChunkProviderGlowLand(this.worldObj, this.worldObj.getSeed(), false);
 	}
 
 	public int getAverageGroundLevel() {
@@ -37,7 +36,7 @@ public class WorldProviderGlowLand extends WorldProvider{
 	}
 
 	public String getDimensionName() {
-		return "UnDead";
+		return "Glow Land";
 	}
 
 	public boolean renderStars() {
@@ -65,7 +64,7 @@ public class WorldProviderGlowLand extends WorldProvider{
 	}
 
 	public float setMoonSize() {
-		return 8.0F;
+		return 10.0F;
 	}
 
 	@SideOnly(Side.CLIENT)

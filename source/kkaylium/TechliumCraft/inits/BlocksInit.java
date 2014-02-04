@@ -13,6 +13,8 @@ import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
 import kkaylium.TechliumCraft.blocks.BlockInfuserL1;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
+import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyFlowing;
+import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyStill;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
@@ -21,6 +23,7 @@ import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
 import kkaylium.TechliumCraft.tileentities.TileEntityInfuserL1;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -44,21 +47,24 @@ public class BlocksInit {
 	
 	public static Block infuserL1;
 	
+	public static Block serumDirtyStill;
+	public static Block serumDirtyFlowing;
+	
 	public static void blocksInit()
 	{
 		glowOres = new BlockGlowOre(BlockIds.GLOW_ORE_ID).setUnlocalizedName(Strings.GLOW_ORE_KEY);
 			GameRegistry.registerBlock(glowOres, ItemBlockGlowOre.class, Strings.GLOW_ORE_KEY);
-		glowDirt = new BlockGlowDirt(BlockIds.GLOW_DIRT_ID).setUnlocalizedName(Strings.GLOW_DIRT_KEY).setTextureName("tcgg:" + Strings.GLOW_DIRT_KEY);
+		glowDirt = new BlockGlowDirt(BlockIds.GLOW_DIRT_ID).setUnlocalizedName(Strings.GLOW_DIRT_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_DIRT_KEY);
 			GameRegistry.registerBlock(glowDirt, Strings.GLOW_DIRT_KEY);
-		glowStone = new BlockGlowStone(BlockIds.GLOW_STONE_ID).setUnlocalizedName(Strings.GLOW_STONE_KEY).setTextureName("tcgg:" + Strings.GLOW_STONE_KEY);
+		glowStone = new BlockGlowStone(BlockIds.GLOW_STONE_ID).setUnlocalizedName(Strings.GLOW_STONE_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_STONE_KEY);
 			GameRegistry.registerBlock(glowStone, Strings.GLOW_STONE_KEY);
-		glowLog = new BlockGlowLog(BlockIds.GLOW_LOG_ID).setUnlocalizedName(Strings.GLOW_LOG_KEY).setTextureName("tcgg:" + Strings.GLOW_LOG_KEY);
+		glowLog = new BlockGlowLog(BlockIds.GLOW_LOG_ID).setUnlocalizedName(Strings.GLOW_LOG_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_LOG_KEY);
 			GameRegistry.registerBlock(glowLog, Strings.GLOW_LOG_KEY);
-		glowLeaves = new BlockGlowLeaves(BlockIds.GLOW_LEAVES_ID).setUnlocalizedName(Strings.GLOW_LEAVES_KEY).setTextureName("tcgg:" + Strings.GLOW_LEAVES_KEY);
+		glowLeaves = new BlockGlowLeaves(BlockIds.GLOW_LEAVES_ID).setUnlocalizedName(Strings.GLOW_LEAVES_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_LEAVES_KEY);
 			GameRegistry.registerBlock(glowLeaves, Strings.GLOW_LEAVES_KEY);
-		glowSapling = new BlockGlowSapling(BlockIds.GLOW_SAPLING_ID).setUnlocalizedName(Strings.GLOW_SAPLING_KEY).setTextureName("tcgg:" + Strings.GLOW_SAPLING_KEY);
+		glowSapling = new BlockGlowSapling(BlockIds.GLOW_SAPLING_ID).setUnlocalizedName(Strings.GLOW_SAPLING_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_SAPLING_KEY);
 			GameRegistry.registerBlock(glowSapling, Strings.GLOW_SAPLING_KEY);
-		glowPlanks = new BlockGlowPlanks(BlockIds.GLOW_PLANKS_ID).setUnlocalizedName(Strings.GLOW_PLANKS_KEY).setTextureName("tcgg:" + Strings.GLOW_PLANKS_KEY);
+		glowPlanks = new BlockGlowPlanks(BlockIds.GLOW_PLANKS_ID).setUnlocalizedName(Strings.GLOW_PLANKS_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_PLANKS_KEY);
 			GameRegistry.registerBlock(glowPlanks, Strings.GLOW_PLANKS_KEY);
 		glowLandPortal = new BlockGlowLandPortal(BlockIds.GLOW_PORTAL_ID).setUnlocalizedName(Strings.GLOW_PORTAL_KEY);
 			GameRegistry.registerBlock(glowLandPortal, Strings.GLOW_PORTAL_KEY);
@@ -73,6 +79,11 @@ public class BlocksInit {
 			
 		infuserL1 = new BlockInfuserL1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
 			GameRegistry.registerBlock(infuserL1, "infuserL1");
+			
+		serumDirtyStill = new BlockSerumDirtyStill(BlockIds.SERUM_DIRTY_STILL_ID, Material.water).setUnlocalizedName(Strings.SERUM_DIRTY_STILL_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.SERUM_DIRTY_STILL_KEY);
+			GameRegistry.registerBlock(serumDirtyStill, Strings.SERUM_DIRTY_STILL_KEY);
+		serumDirtyFlowing = new BlockSerumDirtyFlowing(BlockIds.SERUM_DIRTY_FLOWING_ID, Material.water).setUnlocalizedName(Strings.SERUM_DIRTY_FLOWING_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.SERUM_DIRTY_FLOWING_KEY);
+			GameRegistry.registerBlock(serumDirtyFlowing, Strings.SERUM_DIRTY_FLOWING_KEY);
 	}
 	
 	public static void addNames()
@@ -103,6 +114,9 @@ public class BlocksInit {
 		LanguageRegistry.addName(glowDoor, Strings.GLOW_DOOR_NAME);
 		
 		LanguageRegistry.addName(infuserL1, "Serum Infuser: Level One");
+		
+		LanguageRegistry.addName(serumDirtyStill, Strings.SERUM_DIRTY_STILL_NAME);
+		LanguageRegistry.addName(serumDirtyFlowing, Strings.SERUM_DIRTY_FLOWING_NAME);
 	}
 	
 	public static void registerTileEntities()

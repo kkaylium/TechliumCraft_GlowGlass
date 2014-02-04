@@ -20,9 +20,9 @@ public class ItemsInit {
 	public static void initItems() {
 		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_ID).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);
 			GameRegistry.registerItem(glowCrystals, Strings.GLOW_CRYSTALS_KEY);
-		glowSticks = new ItemGlowSticks(ItemIds.GLOW_STICK_ID).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName("tcgg:" + Strings.GLOW_STICKS_KEY);
+		glowSticks = new ItemGlowSticks(ItemIds.GLOW_STICK_ID).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_STICKS_KEY);
 			GameRegistry.registerItem(glowSticks, Strings.GLOW_STICKS_KEY);
-		glowDoorItem = new ItemGlowDoor(ItemIds.GLOW_DOOR_ITEM_ID).setUnlocalizedName(Strings.GLOW_DOOR_KEY).setTextureName("tcgg" + Strings.GLOW_DOOR_KEY);
+		glowDoorItem = new ItemGlowDoor(ItemIds.GLOW_DOOR_ITEM_ID).setUnlocalizedName(Strings.GLOW_DOOR_ITEM_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_DOOR_ITEM_KEY);
 	}
 	public static void itemNames(){
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), Strings.GLOW_CRYSTALS_NAME + " : White");
@@ -40,5 +40,6 @@ public class ItemsInit {
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 12), Strings.GLOW_CRYSTALS_NAME + " : Special");
 		
 		LanguageRegistry.addName(glowSticks, Strings.GLOW_STICKS_NAME);
+		LanguageRegistry.addName(glowDoorItem, "Glow Door");
 	}
 }

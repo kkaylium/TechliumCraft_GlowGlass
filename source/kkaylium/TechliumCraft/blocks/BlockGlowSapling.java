@@ -5,6 +5,7 @@ import java.util.Random;
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.gen.OverworldGenGlowTree;
 import kkaylium.TechliumCraft.inits.BlocksInit;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -17,7 +18,7 @@ import net.minecraftforge.event.terraingen.TerrainGen;
 public class BlockGlowSapling extends BlockFlower{
 
 	 /** change the name to your sapling name **/
-    public static final String[] WOOD_TYPES = new String[] {"Tutorial"};
+    public static final String[] WOOD_TYPES = new String[] {"Glow"};
     public BlockGlowSapling(int i)
     {
             super(i);
@@ -29,7 +30,7 @@ public class BlockGlowSapling extends BlockFlower{
 
 	@Override
 	public void registerIcons(IconRegister iconRegister) {
-		blockIcon = iconRegister.registerIcon("tcgg:glowSapling");
+		blockIcon = iconRegister.registerIcon(Strings.MOD_ID + ":glowSapling");
 	}
 
 	/**

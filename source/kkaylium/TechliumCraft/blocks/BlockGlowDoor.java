@@ -4,7 +4,7 @@ import java.util.Random;
 
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
+import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowDoor;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.ITileEntityProvider;
@@ -66,9 +66,9 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	    }
 	  
 	  TileEntity t = par1IBlockAccess.getBlockTileEntity(par2, par3, par4);
-      if (t instanceof TileEntityGlowBlock)
+      if (t instanceof TileEntityGlowDoor)
       {
-          if (((TileEntityGlowBlock)t).color <= 13) return (meta & 8) != 0 ? topDoorIcons[((TileEntityGlowDoor)t).color] : textures[((TileEntityGlowDoor)t).color];
+          if (((TileEntityGlowDoor)t).color <= 13) return (meta & 8) != 0 ? topDoorIcons[((TileEntityGlowDoor)t).color] : textures[((TileEntityGlowDoor)t).color];
           else return this.blockIcon;
       }
 
@@ -86,11 +86,11 @@ public class BlockGlowDoor extends BlockDoor implements ITileEntityProvider{
 	{
 		for (int i = 0; i < textures.length; i++)
         {
-            textures[i] = iconRegister.registerIcon("tcgg:" + iconNames[i] + "_upper");
-            topDoorIcons[i] = iconRegister.registerIcon("tcgg:" + iconNames[i] + "_lower");
+            textures[i] = iconRegister.registerIcon(Strings.MOD_ID + ":" + iconNames[i] + "_upper");
+            topDoorIcons[i] = iconRegister.registerIcon(Strings.MOD_ID + ":" + iconNames[i] + "_lower");
         }
-	  this.blockIcon = iconRegister.registerIcon("glowglass:GDWHITE" + "_lower");
-	  this.topDoorIcon = iconRegister.registerIcon("glowglass:GDWHITE" + "_upper");
+	  this.blockIcon = iconRegister.registerIcon(Strings.MOD_ID + ":GDWhite" + "_lower");
+	  this.topDoorIcon = iconRegister.registerIcon(Strings.MOD_ID + ":GDWhite" + "_upper");
 	  this.flippedIcons[0] = new IconFlipped(blockIcon, true, false);
 	  this.flippedIcons[1] = new IconFlipped(topDoorIcon, true, false);
 	}

@@ -5,6 +5,7 @@ import java.util.Random;
 import kkaylium.TechliumCraft.gen.glowLand.GlowLandTeleporter;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.lib.Reference;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -22,7 +23,7 @@ public class BlockGlowLandPortal extends BlockBreakable{
 
 	public BlockGlowLandPortal(int par1)
     {
-            super(par1, "tcgg:glowLandPortal", Material.portal, false);
+            super(par1, Strings.MOD_ID + ":glowLandPortal", Material.portal, false);
             this.setTickRandomly(true);
             this.setHardness(-1.0F);
             this.setStepSound(soundGlassFootstep);

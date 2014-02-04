@@ -5,6 +5,7 @@ import java.util.Random;
 
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -91,7 +92,7 @@ public class BlockGlowOre extends Block{
             this.icons = new Icon[oreNames.length];
             
             for(int i = 0; i < this.icons.length; i++) {
-                    this.icons[i] = iconRegister.registerIcon("tcgg:" + this.getTextureName() + oreNames[i]);
+                    this.icons[i] = iconRegister.registerIcon(Strings.MOD_ID + ":" + this.getTextureName() + oreNames[i]);
             }
     }
 	

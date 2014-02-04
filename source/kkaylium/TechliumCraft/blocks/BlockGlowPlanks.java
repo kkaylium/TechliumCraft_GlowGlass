@@ -1,11 +1,9 @@
 package kkaylium.TechliumCraft.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
+import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -17,6 +15,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockGlowPlanks extends BlockContainer{
 
@@ -83,9 +83,9 @@ public class BlockGlowPlanks extends BlockContainer{
     {
         for (int i = 0; i < textures.length; i++)
         {
-            textures[i] = iconregister.registerIcon("tcgg:" + iconNames[i]);
+            textures[i] = iconregister.registerIcon(Strings.MOD_ID + ":" + iconNames[i]);
         }
-        blockIcon = iconregister.registerIcon("tcgg:glowPlanks");
+        blockIcon = iconregister.registerIcon(Strings.MOD_ID + ":glowPlanks");
     }
 
     @Override
