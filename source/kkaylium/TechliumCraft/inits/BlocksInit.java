@@ -50,6 +50,9 @@ public class BlocksInit {
 	public static Block serumDirtyStill;
 	public static Block serumDirtyFlowing;
 	
+	public static Block liquidPipeSolid;
+	public static Block liquidPipeTranparent;
+	
 	public static void blocksInit()
 	{
 		glowOres = new BlockGlowOre(BlockIds.GLOW_ORE_ID).setUnlocalizedName(Strings.GLOW_ORE_KEY);

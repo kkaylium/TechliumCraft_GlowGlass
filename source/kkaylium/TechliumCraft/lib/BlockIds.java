@@ -20,7 +20,7 @@ public class BlockIds {
 	public static int INFUSERL1_defaultId = 511;
 	
 	public static int SERUM_DIRTY_STILL_defaultId = 521;
-	public static int SERUM_DIRTY_FLOWING_defaultId = 522;
+	public static int SERUM_DIRTY_FLOWING_defaultId = 520;
 	
 	public static int GLOW_DIRT_ID;
 	public static int GLOW_STONE_ID;

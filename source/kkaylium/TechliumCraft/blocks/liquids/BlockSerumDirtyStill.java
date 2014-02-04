@@ -1,5 +1,6 @@
 package kkaylium.TechliumCraft.blocks.liquids;
 
+import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.BlockStationary;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -21,8 +22,8 @@ public class BlockSerumDirtyStill extends BlockStationary{
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister iconRegister) {
         this.theIcon = new Icon[] {
-                iconRegister.registerIcon("tcgg:SerumDirtyStill"),
-                iconRegister.registerIcon("tcgg:SerumDirtyFlowing") };
+                iconRegister.registerIcon(Strings.MOD_ID + ":SerumDirtyStill"),
+                iconRegister.registerIcon(Strings.MOD_ID + ":SerumDirtyFlowing") };
     }
 
 }
