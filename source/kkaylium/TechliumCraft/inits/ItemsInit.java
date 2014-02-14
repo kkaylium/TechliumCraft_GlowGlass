@@ -16,6 +16,10 @@ public class ItemsInit {
 	public static Item glowCrystals;
 	public static Item glowSticks;
 	public static Item glowDoorItem;
+	public static Item glowArmor_HEAD;
+	public static Item glowArmor_CHESTPLATE;
+	public static Item glowArmor_LEGGINGS;
+	public static Item glowArmor_BOOTS;
 	
 	public static void initItems() {
 		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_ID).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);

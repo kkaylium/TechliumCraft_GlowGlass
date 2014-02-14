@@ -11,17 +11,17 @@ import kkaylium.TechliumCraft.blocks.BlockGlowOre;
 import kkaylium.TechliumCraft.blocks.BlockGlowPlanks;
 import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
-import kkaylium.TechliumCraft.blocks.BlockInfuserL1;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyFlowing;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyStill;
+import kkaylium.TechliumCraft.blocks.machines.BlockInfuserT1;
 import kkaylium.TechliumCraft.lib.BlockIds;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowFence;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowGlass;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowPlanks;
-import kkaylium.TechliumCraft.tileentities.TileEntityInfuserL1;
+import kkaylium.TechliumCraft.tileentities.TileEntityInfuserT1;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -80,7 +80,7 @@ public class BlocksInit {
 		glowDoor = new BlockGlowFence(BlockIds.GLOW_DOOR_ID, Strings.GLOW_DOOR_KEY).setUnlocalizedName(Strings.GLOW_DOOR_ITEM_KEY);
 			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
 			
-		infuserL1 = new BlockInfuserL1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
+		infuserL1 = new BlockInfuserT1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
 			GameRegistry.registerBlock(infuserL1, "infuserL1");
 			
 		serumDirtyStill = new BlockSerumDirtyStill(BlockIds.SERUM_DIRTY_STILL_ID, Material.water).setUnlocalizedName(Strings.SERUM_DIRTY_STILL_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.SERUM_DIRTY_STILL_KEY);
@@ -129,7 +129,7 @@ public class BlocksInit {
 		GameRegistry.registerTileEntity(TileEntityGlowPlanks.class, Strings.TE_GLOW_PLANKS_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_FENCE_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_DOOR_KEY);
-		GameRegistry.registerTileEntity(TileEntityInfuserL1.class, "TileEntityInfuserL1");
+		GameRegistry.registerTileEntity(TileEntityInfuserT1.class, "TileEntityInfuserL1");
 	}
 
 }
