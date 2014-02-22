@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockGlowDirt extends Block{
 
-	public static final String[] dirtNames = new String[]{"White", "Black", "Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
+	public static final String[] dirtNames = new String[]{"Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 	
@@ -71,8 +71,6 @@ public class BlockGlowDirt extends Block{
 		list.add(new ItemStack(par1, 1, 7)); //Sky
 		list.add(new ItemStack(par1, 1, 8)); //Blue
 		list.add(new ItemStack(par1, 1, 9)); //Lilac
-		list.add(new ItemStack(par1, 1, 10)); //Purple
-		list.add(new ItemStack(par1, 1, 11)); //Pink
 	}
 	
 	@SideOnly(Side.CLIENT)

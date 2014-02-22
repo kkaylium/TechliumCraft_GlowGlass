@@ -20,7 +20,7 @@ public class ItemBlockGlowDirt extends ItemBlock{
 	@Override
 	public String getUnlocalizedName(ItemStack itemstack){
 		StringBuilder unlocalizedName = new StringBuilder();
-		int meta = MathHelper.clamp_int(itemstack.getItemDamage(), 0, 11);
+		int meta = MathHelper.clamp_int(itemstack.getItemDamage(), 0, 9);
 		
 		unlocalizedName.append("item.");
 		unlocalizedName.append(Strings.MOD_ID + ":");

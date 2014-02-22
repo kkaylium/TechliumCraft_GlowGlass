@@ -93,44 +93,32 @@ public class BlocksInit {
 	
 	public static void addNames()
 	{
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 0), Strings.GLOW_ORE_NAME + " : White");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 1), Strings.GLOW_ORE_NAME + " : Black");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 2), Strings.GLOW_ORE_NAME + " : Red");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 3), Strings.GLOW_ORE_NAME + " : Orange");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 4), Strings.GLOW_ORE_NAME + " : Yellow");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 5), Strings.GLOW_ORE_NAME + " : Lime");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 6), Strings.GLOW_ORE_NAME + " : Green");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 7), Strings.GLOW_ORE_NAME + " : Sky");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 8), Strings.GLOW_ORE_NAME + " : Blue");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 9), Strings.GLOW_ORE_NAME + " : Lilac");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 10), Strings.GLOW_ORE_NAME + " : Purple");
-		LanguageRegistry.addName(new ItemStack(glowOres, 1, 11), Strings.GLOW_ORE_NAME + " : Pink");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 0), Strings.GLOW_ORE_NAME + ": White");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 1), Strings.GLOW_ORE_NAME + ": Black");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 2), Strings.GLOW_ORE_NAME + ": Red");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 3), Strings.GLOW_ORE_NAME + ": Orange");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 4), Strings.GLOW_ORE_NAME + ": Yellow");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 5), Strings.GLOW_ORE_NAME + ": Lime");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 6), Strings.GLOW_ORE_NAME + ": Green");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 7), Strings.GLOW_ORE_NAME + ": Sky");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 8), Strings.GLOW_ORE_NAME + ": Blue");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 9), Strings.GLOW_ORE_NAME + ": Lilac");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 10), Strings.GLOW_ORE_NAME + ": Purple");
+		LanguageRegistry.addName(new ItemStack(glowOres, 1, 11), Strings.GLOW_ORE_NAME + ": Pink");
 		
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 0), Strings.GLOW_DIRT_NAME + " : White");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 1), Strings.GLOW_DIRT_NAME + " : Black");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 2), Strings.GLOW_DIRT_NAME + " : Red");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 3), Strings.GLOW_DIRT_NAME + " : Orange");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 4), Strings.GLOW_DIRT_NAME + " : Yellow");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 5), Strings.GLOW_DIRT_NAME + " : Lime");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 6), Strings.GLOW_DIRT_NAME + " : Green");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 7), Strings.GLOW_DIRT_NAME + " : Sky");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 8), Strings.GLOW_DIRT_NAME + " : Blue");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 9), Strings.GLOW_DIRT_NAME + " : Lilac");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 10), Strings.GLOW_DIRT_NAME + " : Purple");
-		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 11), Strings.GLOW_DIRT_NAME + " : Pink");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 0), Strings.GLOW_DIRT_NAME + ": Red");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 1), Strings.GLOW_DIRT_NAME + ": Orange");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 2), Strings.GLOW_DIRT_NAME + ": Yellow");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 3), Strings.GLOW_DIRT_NAME + ": Lime");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 4), Strings.GLOW_DIRT_NAME + ": Green");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 5), Strings.GLOW_DIRT_NAME + ": Sky");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 6), Strings.GLOW_DIRT_NAME + ": Blue");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 7), Strings.GLOW_DIRT_NAME + ": Lilac");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 8), Strings.GLOW_DIRT_NAME + ": Purple");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 9), Strings.GLOW_DIRT_NAME + ": Pink");
 		
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 0), Strings.GLOW_STONE_NAME + " : White");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 1), Strings.GLOW_STONE_NAME + " : Black");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 2), Strings.GLOW_STONE_NAME + " : Red");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 3), Strings.GLOW_STONE_NAME + " : Orange");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 4), Strings.GLOW_STONE_NAME + " : Yellow");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 5), Strings.GLOW_STONE_NAME + " : Lime");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 6), Strings.GLOW_STONE_NAME + " : Green");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 7), Strings.GLOW_STONE_NAME + " : Sky");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 8), Strings.GLOW_STONE_NAME + " : Blue");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 9), Strings.GLOW_STONE_NAME + " : Lilac");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 10), Strings.GLOW_STONE_NAME + " : Purple");
-		LanguageRegistry.addName(new ItemStack(glowStone, 1, 11), Strings.GLOW_STONE_NAME + " : Pink");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 0), Strings.GLOW_STONE_NAME + ": White");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 1), Strings.GLOW_STONE_NAME + ": Black");
 		
 		LanguageRegistry.addName(glowLog, Strings.GLOW_LOG_NAME);
 		LanguageRegistry.addName(glowLeaves, Strings.GLOW_LEAVES_NAME);

@@ -16,7 +16,7 @@ import net.minecraft.util.Icon;
 
 public class BlockGlowStone extends Block{
 
-	public static final String[] stoneNames = new String[]{"White", "Black", "Red", "Orange", "Yellow", "Lime", "Green", "Sky", "Blue", "Lilac", "Purple", "Pink"};
+	public static final String[] stoneNames = new String[]{"White", "Black"};
 	@SideOnly(Side.CLIENT)
 	private Icon[] icons;
 	
@@ -27,7 +27,7 @@ public class BlockGlowStone extends Block{
 		this.setTextureName("glowStone");
 		this.setHardness(4.0F);
 		this.setResistance(10.0F);
-		this.setStepSound(soundGrassFootstep);
+		this.setStepSound(soundStoneFootstep);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -63,16 +63,6 @@ public class BlockGlowStone extends Block{
 	public void getSubBlocks(int par1, CreativeTabs creatveTabs, List list){
 		list.add(new ItemStack(par1, 1, 0)); //White
 		list.add(new ItemStack(par1, 1, 1)); //Black
-		list.add(new ItemStack(par1, 1, 2)); //Red
-		list.add(new ItemStack(par1, 1, 3)); //Orange
-		list.add(new ItemStack(par1, 1, 4)); //Yellow
-		list.add(new ItemStack(par1, 1, 5)); //Lime
-		list.add(new ItemStack(par1, 1, 6)); //Green
-		list.add(new ItemStack(par1, 1, 7)); //Sky
-		list.add(new ItemStack(par1, 1, 8)); //Blue
-		list.add(new ItemStack(par1, 1, 9)); //Lilac
-		list.add(new ItemStack(par1, 1, 10)); //Purple
-		list.add(new ItemStack(par1, 1, 11)); //Pink
 	}
 	
 	@SideOnly(Side.CLIENT)
