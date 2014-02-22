@@ -11,7 +11,9 @@ import kkaylium.TechliumCraft.blocks.BlockGlowOre;
 import kkaylium.TechliumCraft.blocks.BlockGlowPlanks;
 import kkaylium.TechliumCraft.blocks.BlockGlowSapling;
 import kkaylium.TechliumCraft.blocks.BlockGlowStone;
+import kkaylium.TechliumCraft.blocks.ItemBlockGlowDirt;
 import kkaylium.TechliumCraft.blocks.ItemBlockGlowOre;
+import kkaylium.TechliumCraft.blocks.ItemBlockGlowStone;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyFlowing;
 import kkaylium.TechliumCraft.blocks.liquids.BlockSerumDirtyStill;
 import kkaylium.TechliumCraft.blocks.machines.BlockInfuserT1;
@@ -45,7 +47,7 @@ public class BlocksInit {
 	public static Block glowGate;
 	public static Block glowDoor;
 	
-	public static Block infuserL1;
+	public static Block infuserT1;
 	
 	public static Block serumDirtyStill;
 	public static Block serumDirtyFlowing;
@@ -57,10 +59,10 @@ public class BlocksInit {
 	{
 		glowOres = new BlockGlowOre(BlockIds.GLOW_ORE_ID).setUnlocalizedName(Strings.GLOW_ORE_KEY);
 			GameRegistry.registerBlock(glowOres, ItemBlockGlowOre.class, Strings.GLOW_ORE_KEY);
-		glowDirt = new BlockGlowDirt(BlockIds.GLOW_DIRT_ID).setUnlocalizedName(Strings.GLOW_DIRT_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_DIRT_KEY);
-			GameRegistry.registerBlock(glowDirt, Strings.GLOW_DIRT_KEY);
-		glowStone = new BlockGlowStone(BlockIds.GLOW_STONE_ID).setUnlocalizedName(Strings.GLOW_STONE_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_STONE_KEY);
-			GameRegistry.registerBlock(glowStone, Strings.GLOW_STONE_KEY);
+		glowDirt = new BlockGlowDirt(BlockIds.GLOW_DIRT_ID).setUnlocalizedName(Strings.GLOW_DIRT_KEY);
+			GameRegistry.registerBlock(glowDirt, ItemBlockGlowDirt.class, Strings.GLOW_DIRT_KEY);
+		glowStone = new BlockGlowStone(BlockIds.GLOW_STONE_ID).setUnlocalizedName(Strings.GLOW_STONE_KEY);
+			GameRegistry.registerBlock(glowStone, ItemBlockGlowStone.class, Strings.GLOW_STONE_KEY);
 		glowLog = new BlockGlowLog(BlockIds.GLOW_LOG_ID).setUnlocalizedName(Strings.GLOW_LOG_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_LOG_KEY);
 			GameRegistry.registerBlock(glowLog, Strings.GLOW_LOG_KEY);
 		glowLeaves = new BlockGlowLeaves(BlockIds.GLOW_LEAVES_ID).setUnlocalizedName(Strings.GLOW_LEAVES_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_LEAVES_KEY);
@@ -80,8 +82,8 @@ public class BlocksInit {
 		glowDoor = new BlockGlowFence(BlockIds.GLOW_DOOR_ID, Strings.GLOW_DOOR_KEY).setUnlocalizedName(Strings.GLOW_DOOR_ITEM_KEY);
 			GameRegistry.registerBlock(glowDoor, Strings.GLOW_DOOR_KEY);
 			
-		infuserL1 = new BlockInfuserT1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserL1");
-			GameRegistry.registerBlock(infuserL1, "infuserL1");
+		infuserT1 = new BlockInfuserT1(BlockIds.INFUSERL1_defaultId).setUnlocalizedName("infuserT1");
+			GameRegistry.registerBlock(infuserT1, "infuserL1");
 			
 		serumDirtyStill = new BlockSerumDirtyStill(BlockIds.SERUM_DIRTY_STILL_ID, Material.water).setUnlocalizedName(Strings.SERUM_DIRTY_STILL_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.SERUM_DIRTY_STILL_KEY);
 			GameRegistry.registerBlock(serumDirtyStill, Strings.SERUM_DIRTY_STILL_KEY);
@@ -104,8 +106,32 @@ public class BlocksInit {
 		LanguageRegistry.addName(new ItemStack(glowOres, 1, 10), Strings.GLOW_ORE_NAME + " : Purple");
 		LanguageRegistry.addName(new ItemStack(glowOres, 1, 11), Strings.GLOW_ORE_NAME + " : Pink");
 		
-		LanguageRegistry.addName(glowDirt, Strings.GLOW_DIRT_NAME);
-		LanguageRegistry.addName(glowStone, Strings.GLOW_STONE_NAME);
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 0), Strings.GLOW_DIRT_NAME + " : White");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 1), Strings.GLOW_DIRT_NAME + " : Black");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 2), Strings.GLOW_DIRT_NAME + " : Red");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 3), Strings.GLOW_DIRT_NAME + " : Orange");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 4), Strings.GLOW_DIRT_NAME + " : Yellow");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 5), Strings.GLOW_DIRT_NAME + " : Lime");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 6), Strings.GLOW_DIRT_NAME + " : Green");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 7), Strings.GLOW_DIRT_NAME + " : Sky");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 8), Strings.GLOW_DIRT_NAME + " : Blue");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 9), Strings.GLOW_DIRT_NAME + " : Lilac");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 10), Strings.GLOW_DIRT_NAME + " : Purple");
+		LanguageRegistry.addName(new ItemStack(glowDirt, 1, 11), Strings.GLOW_DIRT_NAME + " : Pink");
+		
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 0), Strings.GLOW_STONE_NAME + " : White");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 1), Strings.GLOW_STONE_NAME + " : Black");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 2), Strings.GLOW_STONE_NAME + " : Red");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 3), Strings.GLOW_STONE_NAME + " : Orange");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 4), Strings.GLOW_STONE_NAME + " : Yellow");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 5), Strings.GLOW_STONE_NAME + " : Lime");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 6), Strings.GLOW_STONE_NAME + " : Green");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 7), Strings.GLOW_STONE_NAME + " : Sky");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 8), Strings.GLOW_STONE_NAME + " : Blue");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 9), Strings.GLOW_STONE_NAME + " : Lilac");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 10), Strings.GLOW_STONE_NAME + " : Purple");
+		LanguageRegistry.addName(new ItemStack(glowStone, 1, 11), Strings.GLOW_STONE_NAME + " : Pink");
+		
 		LanguageRegistry.addName(glowLog, Strings.GLOW_LOG_NAME);
 		LanguageRegistry.addName(glowLeaves, Strings.GLOW_LEAVES_NAME);
 		LanguageRegistry.addName(glowSapling, Strings.GLOW_SAPLING_NAME);
@@ -116,7 +142,7 @@ public class BlocksInit {
 		LanguageRegistry.addName(glowFence, Strings.GLOW_FENCE_NAME);
 		LanguageRegistry.addName(glowDoor, Strings.GLOW_DOOR_NAME);
 		
-		LanguageRegistry.addName(infuserL1, "Serum Infuser: Level One");
+		LanguageRegistry.addName(infuserT1, "Serum Infuser: Tier One");
 		
 		LanguageRegistry.addName(serumDirtyStill, Strings.SERUM_DIRTY_STILL_NAME);
 		LanguageRegistry.addName(serumDirtyFlowing, Strings.SERUM_DIRTY_FLOWING_NAME);
@@ -129,7 +155,7 @@ public class BlocksInit {
 		GameRegistry.registerTileEntity(TileEntityGlowPlanks.class, Strings.TE_GLOW_PLANKS_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_FENCE_KEY);
 		GameRegistry.registerTileEntity(TileEntityGlowFence.class, Strings.TE_GLOW_DOOR_KEY);
-		GameRegistry.registerTileEntity(TileEntityInfuserT1.class, "TileEntityInfuserL1");
+		GameRegistry.registerTileEntity(TileEntityInfuserT1.class, "TileEntityInfuserT1");
 	}
 
 }
