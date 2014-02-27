@@ -3,9 +3,11 @@ package kkaylium.TechliumCraft.inits;
 import kkaylium.TechliumCraft.items.ItemGlowCrystals;
 import kkaylium.TechliumCraft.items.ItemGlowDoor;
 import kkaylium.TechliumCraft.items.ItemGlowSticks;
+import kkaylium.TechliumCraft.items.armor.ItemCrystalArmor;
 import kkaylium.TechliumCraft.lib.ItemIds;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -16,10 +18,10 @@ public class ItemsInit {
 	public static Item glowCrystals;
 	public static Item glowSticks;
 	public static Item glowDoorItem;
-	public static Item glowArmor_HEAD;
-	public static Item glowArmor_CHESTPLATE;
-	public static Item glowArmor_LEGGINGS;
-	public static Item glowArmor_BOOTS;
+	public static ItemArmor glowArmorT1_HEAD;
+	public static ItemArmor glowArmorT1_CHESTPLATE;
+	public static ItemArmor glowArmorT1_LEGGINGS;
+	public static ItemArmor glowArmorT1_BOOTS;
 	
 	public static void initItems() {
 		glowCrystals = new ItemGlowCrystals(ItemIds.GLOW_CRYSTALS_ID).setUnlocalizedName(Strings.GLOW_CRYSTALS_KEY);
@@ -27,6 +29,8 @@ public class ItemsInit {
 		glowSticks = new ItemGlowSticks(ItemIds.GLOW_STICK_ID).setUnlocalizedName(Strings.GLOW_STICKS_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_STICKS_KEY);
 			GameRegistry.registerItem(glowSticks, Strings.GLOW_STICKS_KEY);
 		glowDoorItem = new ItemGlowDoor(ItemIds.GLOW_DOOR_ITEM_ID).setUnlocalizedName(Strings.GLOW_DOOR_ITEM_KEY).setTextureName(Strings.MOD_ID + ":" + Strings.GLOW_DOOR_ITEM_KEY);
+		
+		glowArmorT1_HEAD = new ItemCrystalArmor(0, null, 0, 0);
 	}
 	public static void itemNames(){
 		LanguageRegistry.addName(new ItemStack(glowCrystals, 1, 0), Strings.GLOW_CRYSTALS_NAME + " : White");
