@@ -9,7 +9,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityRainbowSlime extends EntitySlime{
+public class EntityRainbowSlime extends EntitySlime {
 	
 	public float squishAmount;
     public float squishFactor;
@@ -28,6 +28,10 @@ public class EntityRainbowSlime extends EntitySlime{
         this.yOffset = 0.0F;
         this.slimeJumpDelay = this.rand.nextInt(20) + 10;
         this.setSlimeSize(i);
+        this.tasks.addTask(0, new EntityAISwimming(this));
+        this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
+    	this.tasks.addTask(3, new EntityAITempt(this, 1.00, ItemsInit.glowCrystals.itemID, false));
+    	this.tasks.addTask(5, new EntityAIWander(this, 1.0D));
     }
         
     @Override
@@ -36,7 +40,13 @@ public class EntityRainbowSlime extends EntitySlime{
         super.entityInit();
         //this.dataWatcher.addObject(16, new Byte((byte)1));
     }
-
+    
+    protected void applyEntityAttributes()
+    {
+        super.applyEntityAttributes();
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.25D);
+    }
+    
     @Override
     protected void setSlimeSize(int par1)
     {
