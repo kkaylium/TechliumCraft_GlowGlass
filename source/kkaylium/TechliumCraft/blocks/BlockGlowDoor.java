@@ -2,7 +2,6 @@ package kkaylium.TechliumCraft.blocks;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowDoor;

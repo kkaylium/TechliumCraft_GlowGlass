@@ -2,7 +2,6 @@ package kkaylium.TechliumCraft.blocks;
 
 import java.util.List;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.BlockIds;

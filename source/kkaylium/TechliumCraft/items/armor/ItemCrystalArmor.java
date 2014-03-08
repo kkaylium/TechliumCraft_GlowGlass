@@ -1,6 +1,5 @@
 package kkaylium.TechliumCraft.items.armor;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;

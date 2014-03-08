@@ -1,9 +1,6 @@
 package OLD;
 
-import kkaylium.TechliumCraft.TechliumCraft;
-import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBaseBlock;
-import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;

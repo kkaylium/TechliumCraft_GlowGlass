@@ -3,7 +3,6 @@ package kkaylium.TechliumCraft.blocks;
 import java.util.List;
 import java.util.Random;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.inits.ItemsInit;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;

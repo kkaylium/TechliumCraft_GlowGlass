@@ -2,7 +2,6 @@ package kkaylium.TechliumCraft.items;
 
 import java.util.List;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;

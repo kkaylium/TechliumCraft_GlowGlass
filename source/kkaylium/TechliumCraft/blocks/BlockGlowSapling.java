@@ -2,7 +2,6 @@ package kkaylium.TechliumCraft.blocks;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.gen.OverworldGenGlowTree;
 import kkaylium.TechliumCraft.inits.BlocksInit;
 import kkaylium.TechliumCraft.lib.Strings;

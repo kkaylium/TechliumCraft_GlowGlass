@@ -40,7 +40,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class TechliumCraft {
 	
-	@Instance("tcgg")
+	@Instance("techliumcraft")
 	public static TechliumCraft instance;
 	
 	@SidedProxy(clientSide = "kkaylium.TechliumCraft.proxy.ClientProxy", serverSide = "kkaylium.TechliumCraft.proxy.CommonProxy")

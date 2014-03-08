@@ -1,6 +1,5 @@
 package kkaylium.TechliumCraft.handlers;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.gui.GuiInfuserLevelOne;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;

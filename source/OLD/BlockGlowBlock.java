@@ -2,7 +2,6 @@ package OLD;
 
 import java.util.Random;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.tileentities.TileEntityGlowBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;

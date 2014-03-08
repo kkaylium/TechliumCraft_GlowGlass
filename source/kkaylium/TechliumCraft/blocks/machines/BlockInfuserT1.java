@@ -1,6 +1,5 @@
 package kkaylium.TechliumCraft.blocks.machines;
 
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.tileentities.TileEntityInfuserT1;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

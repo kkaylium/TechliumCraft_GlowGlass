@@ -5,7 +5,6 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import kkaylium.TechliumCraft.TechliumCraft;
 import kkaylium.TechliumCraft.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
